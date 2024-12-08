@@ -1,0 +1,166 @@
+% Creating a simple Title Page in Beamer
+\documentclass{beamer}
+
+% zawieranie znakow
+\usepackage[T1]{fontenc}
+
+% wysrodkowywanie tekstu
+\usepackage{ragged2e}
+
+% podswietlanie skladni
+\usepackage{minted}
+
+% tworzenie przerwy
+\usepackage{setspace}\setstretch{1}
+
+% wybor tla
+\usetheme{Warsaw}
+
+% szczegoly glownej strony
+% tytuł
+\title{Programowanie obiektowe w Pythonie}
+% podtytuł
+\subtitle{Czym jest, jak tworzyć klasy, jak ich używać?}
+% autor
+\author{Oskar}
+%data
+\date{\today}
+
+% logo na każdym slajdzie z szerokością 1 cm
+\logo{\includegraphics[width=1cm]{python-logo.png}}
+
+% tworzenie bloku definicji
+\newtheorem{twierdzenieBlok}{Definicja}
+
+% rozpoczecie dokumentu
+\begin{document}
+
+% slajd glownej strony
+\begin{frame}
+    \titlepage
+\end{frame}
+
+% spis tresci
+\begin{frame}{Spis Treści}
+	\begin{Center}
+    	    \begin{enumerate}
+				\pause
+				\item Czym jest programowanie obiektowe?
+				\pause
+				\item Jak stworzyć klasę w języku python?
+				\pause
+				\item Jak stworzyć metody i pola w klasie?
+				\pause
+				\item Jak tworzyć obiekty i wywoływać na nich metody?
+	    	\end{enumerate}
+	\end{Center}
+\end{frame}
+
+% slajd czym jest programowanie obiektowe 
+\begin{frame}{Czym jest programowanie obiektowe?}
+		\pause
+    	\begin{twierdzenieBlok}
+	    	\begin{Center}
+			\footnotesize Programowanie obiektowe to metoda budowania programów komputerowych za pomocą obiektów. Obiekt łączy ze sobą grupę danych – często o różnych typach – i operujący na nich zestaw funkcji. Inaczej można powiedzieć, że obiekt zawiera dane składowe (pola) oraz funkcje składowe (metody) połączone w spójny element programu.
+			\end{Center}
+		\end{twierdzenieBlok}
+\end{frame}
+
+% slajd jak stworzyć klasę w języku python
+\begin{frame}[fragile]{Jak stworzyć podstawową klasę?}
+	\pause
+	\begin{twierdzenieBlok}
+		\footnotesize Definiowanie klasy z konstruktorem:
+  		\scriptsize
+		\begin{minted}{python}
+class NazwaKlasy(object):
+	def __init__(self):
+		pass
+		\end{minted}
+	\end{twierdzenieBlok}
+\end{frame}
+
+% slajd jak stworzyć metode i pole w klasie
+\begin{frame}[fragile]{Jak stworzyć metodę i polę w klasie ?}
+	\pause
+	\begin{twierdzenieBlok}
+		\footnotesize Definiowanie metody:
+  		\scriptsize
+		\begin{minted}{python}
+class NazwaKlasy(object):
+	def nazwaMetody(self):#nasza metoda
+		pass	
+		\end{minted}
+	\end{twierdzenieBlok}
+	\pause
+
+	\begin{twierdzenieBlok}
+		\footnotesize Definiowanie pola:
+  		\scriptsize
+		\begin{minted}{python}
+class NazwaKlasy(object):
+	nazwaPola = 0 #domyślna wartość	
+		\end{minted}
+	\end{twierdzenieBlok}
+\end{frame}
+
+% slajd jak użyć metody i pola
+\begin{frame}[fragile]{Jak utworzyć instancję klasy i wywołać na niej metodę lub dostać się do pola ?}
+
+			\scriptsize
+			\tiny Aby utworzyć obiekt klasy, musimy najpierw ją zdefiniować z przykładowym polem, jak i metodą: 
+			\begin{minted}{python}
+class NazwaKlasy(object):
+	przykladowePole = 0
+	
+	def przykladowaMetoda(self):
+		print(f"Hello world!")
+
+			\end{minted}
+			\pause
+			
+			\rule{\textwidth}{1pt}
+
+			Aby utworzyć obiekt klasy musimy wywołać następującą instrukcję:
+			\begin{minted}{python}
+
+mojObiektKlasy = NazwaKlasy()
+
+			\end{minted}
+			\pause
+
+			\rule{\textwidth}{1pt}
+
+			Aby wywołać metodę na obiekcie klasy:
+			\begin{minted}{python}
+
+mojObiektKlasy.przykladowaMetoda()
+
+			\end{minted}
+			\pause
+
+			\rule{\textwidth}{1pt}
+
+			Aby dostać się do pola klasy:
+			\begin{minted}{python}
+
+print(mojObiektKlasy.przykladowePole)
+
+			\end{minted}
+	
+\end{frame}
+
+% slajd kończący 
+\begin{frame}
+	\begin{Center}
+		\begin{spacing}{1} Prezentację przygotował Oskar !\end{spacing}
+		\begin{spacing}{2} Dziękuję za uwagę !\end{spacing}
+		\begin{spacing}{2} \includegraphics[width=1cm,height=1cm]{usmiechnieta_buzka.png} \end{spacing}
+	\end{Center}
+\end{frame}
+
+% slajd bibliografia załącznikowej 
+\begin{frame}{Bibliografia załącznikowa}
+\end{frame}
+
+\end{document}
