@@ -8,7 +8,7 @@
 \usepackage{ragged2e}
 
 % podswietlanie skladni
-\usepackage{minted}
+\usepackage[cache=false]{minted}
 
 % tworzenie przerwy
 \usepackage{setspace}\setstretch{1}
@@ -43,32 +43,23 @@
 % spis tresci
 \begin{frame}{Spis Treści}
 	\begin{Center}
-    	    \begin{enumerate}
-				\pause
-				\item Czym jest programowanie obiektowe?
-				\pause
-				\item Jak stworzyć klasę w języku python?
-				\pause
-				\item Jak stworzyć metody i pola w klasie?
-				\pause
-				\item Jak tworzyć obiekty i wywoływać na nich metody?
-	    	\end{enumerate}
+		\tableofcontents[pausesections,hideallsubsections]
 	\end{Center}
 \end{frame}
 
 % slajd czym jest programowanie obiektowe 
+\section{Czym jest programowanie obiektowe}
 \begin{frame}{Czym jest programowanie obiektowe?}
-		\pause
-    	\begin{twierdzenieBlok}
-	    	\begin{Center}
+	    	\begin{twierdzenieBlok}
+		    	\begin{Center}
 			\footnotesize Programowanie obiektowe to metoda budowania programów komputerowych za pomocą obiektów. Obiekt łączy ze sobą grupę danych – często o różnych typach – i operujący na nich zestaw funkcji. Inaczej można powiedzieć, że obiekt zawiera dane składowe (pola) oraz funkcje składowe (metody) połączone w spójny element programu.
 			\end{Center}
 		\end{twierdzenieBlok}
 \end{frame}
 
 % slajd jak stworzyć klasę w języku python
+\section{Jak stworzyć podstawowa klasę?}
 \begin{frame}[fragile]{Jak stworzyć podstawową klasę?}
-	\pause
 	\begin{twierdzenieBlok}
 		\footnotesize Definiowanie klasy z konstruktorem:
   		\scriptsize
@@ -80,9 +71,10 @@ class NazwaKlasy(object):
 	\end{twierdzenieBlok}
 \end{frame}
 
+
 % slajd jak stworzyć metode i pole w klasie
+\section{Jak stworzyć metodę i polę w klasie?}
 \begin{frame}[fragile]{Jak stworzyć metodę i polę w klasie ?}
-	\pause
 	\begin{twierdzenieBlok}
 		\footnotesize Definiowanie metody:
   		\scriptsize
@@ -92,7 +84,6 @@ class NazwaKlasy(object):
 		pass	
 		\end{minted}
 	\end{twierdzenieBlok}
-	\pause
 
 	\begin{twierdzenieBlok}
 		\footnotesize Definiowanie pola:
@@ -105,6 +96,7 @@ class NazwaKlasy(object):
 \end{frame}
 
 % slajd jak użyć metody i pola
+\section{Jak utworzyć instancję klasy i wywołać na niej metodę lub dostać się do pola?}
 \begin{frame}[fragile]{Jak utworzyć instancję klasy i wywołać na niej metodę lub dostać się do pola ?}
 
 			\scriptsize
@@ -117,7 +109,6 @@ class NazwaKlasy(object):
 		print(f"Hello world!")
 
 			\end{minted}
-			\pause
 			
 			\rule{\textwidth}{1pt}
 
@@ -127,7 +118,6 @@ class NazwaKlasy(object):
 mojObiektKlasy = NazwaKlasy()
 
 			\end{minted}
-			\pause
 
 			\rule{\textwidth}{1pt}
 
@@ -137,7 +127,6 @@ mojObiektKlasy = NazwaKlasy()
 mojObiektKlasy.przykladowaMetoda()
 
 			\end{minted}
-			\pause
 
 			\rule{\textwidth}{1pt}
 
@@ -160,6 +149,7 @@ print(mojObiektKlasy.przykladowePole)
 \end{frame}
 
 % slajd bibliografia załącznikowej 
+\section{Bibliografia załącznikowa}
 \begin{frame}{Bibliografia załącznikowa}
 \end{frame}
 
